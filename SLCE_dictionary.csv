@@ -1,0 +1,130 @@
+Variable,Units,Description
+index,unitless,Unique number for indexing
+Date,mm/dd/yy,Date of measurement
+Year,unitless,Year of measurement
+Day,unitless,Day of year of measurement
+Location,unitless,Location of measurement
+Lat,°,Latitude
+Lon,°,Longitude
+Genus,unitless,Genus of individual
+Species,unitless,Species of individual
+Rep,unitless,Repitition of species within a location
+Phenology,unitless,Indicator of deciduousness of individual (evergreen or nonevergreen)
+Lifespan,unitless,Indicator of the length of lifespan of individual (annual or perennial)
+Photosynthesis,unitless,Photosynthetic pathway used by individaul (C3 or C4)
+Stature,unitless,Indicator of stature of individual (tree or non-tree)
+Juvenile,unitless,Indicator of juvenile status (Y = juvenile tree); note: all non-trees are indicated as non-juveniles
+Vcmax,µmol/m2/s,Maximum rate of Rubisco carboxylation
+Jmax,µmol/m2/s,Maximum rate of electron tranport for RuBP regeneration
+Vpmax,µmol/m2/s,Maximum rate of PEPc carboxylation
+Rd,µmol/m2/s,Leaf dark respiration
+Tleaf_photo,°C,Leaf temperature for photosynthetic measurements
+Tleaf_R,°C,Leaf temperature for respiration measurements
+LA,cm2,Leaf area
+LM,g,Leaf mass
+CN,g/g,Leaf carbonto nitrogen ratio
+Nper,%,Leaf nitrogen content
+Cper,%,Leaf carbon content
+LWP_MPa,Mpa,Leaf pre-dawn water potential
+DBH,m,Diameter at breast height (trees only)
+Height,cm,Height of individual (non-trees only)
+SMper,%,Soil moisture at base of individual at 0-10 cm soil depth
+FCper,%,Field capcacity of soil at site (Saxton and Rawls 2006)
+Satper,%,Soil saturation at site (Saxton and Rawls 2006)
+Tavg1,°C,Average temperature on the day of measurement
+Tavg2,°C,Average temperature on the day of and n days prior to measuremet; n = 1
+Tavg3,°C,Average temperature on the day of and n days prior to measuremet; n = 2
+Tavg4,°C,Average temperature on the day of and n days prior to measuremet; n = 3
+Tavg5,°C,Average temperature on the day of and n days prior to measuremet; n = 4
+Tavg6,°C,Average temperature on the day of and n days prior to measuremet; n = 5
+Tavg7,°C,Average temperature on the day of and n days prior to measuremet; n = 6
+Tavg8,°C,Average temperature on the day of and n days prior to measuremet; n = 7
+Tavg9,°C,Average temperature on the day of and n days prior to measuremet; n = 8
+Tavg10,°C,Average temperature on the day of and n days prior to measuremet; n = 9
+Tavg11,°C,Average temperature on the day of and n days prior to measuremet; n = 10
+Tavg12,°C,Average temperature on the day of and n days prior to measuremet; n = 11
+Tavg13,°C,Average temperature on the day of and n days prior to measuremet; n = 12
+Tavg14,°C,Average temperature on the day of and n days prior to measuremet; n = 13
+Tavg15,°C,Average temperature on the day of and n days prior to measuremet; n = 14
+Tavg16,°C,Average temperature on the day of and n days prior to measuremet; n = 15
+Tavg17,°C,Average temperature on the day of and n days prior to measuremet; n = 16
+Tavg18,°C,Average temperature on the day of and n days prior to measuremet; n = 17
+Tavg19,°C,Average temperature on the day of and n days prior to measuremet; n = 18
+Tavg20,°C,Average temperature on the day of and n days prior to measuremet; n = 19
+Tavg21,°C,Average temperature on the day of and n days prior to measuremet; n = 20
+Tavg22,°C,Average temperature on the day of and n days prior to measuremet; n = 21
+Tavg23,°C,Average temperature on the day of and n days prior to measuremet; n = 22
+Tavg24,°C,Average temperature on the day of and n days prior to measuremet; n = 23
+Tavg25,°C,Average temperature on the day of and n days prior to measuremet; n = 24
+Tavg26,°C,Average temperature on the day of and n days prior to measuremet; n = 25
+Tavg27,°C,Average temperature on the day of and n days prior to measuremet; n = 26
+Tavg28,°C,Average temperature on the day of and n days prior to measuremet; n = 27
+Tavg29,°C,Average temperature on the day of and n days prior to measuremet; n = 28
+Tavg30,°C,Average temperature on the day of and n days prior to measuremet; n = 29
+Tavg31,°C,Average temperature on the day of and n days prior to measuremet; n = 30
+Tavg32,°C,Average temperature on the day of and n days prior to measuremet; n = 31
+Tavg33,°C,Average temperature on the day of and n days prior to measuremet; n = 32
+Tavg34,°C,Average temperature on the day of and n days prior to measuremet; n = 33
+Tavg35,°C,Average temperature on the day of and n days prior to measuremet; n = 34
+Tavg36,°C,Average temperature on the day of and n days prior to measuremet; n = 35
+Tavg37,°C,Average temperature on the day of and n days prior to measuremet; n = 36
+Tavg38,°C,Average temperature on the day of and n days prior to measuremet; n = 37
+Tavg39,°C,Average temperature on the day of and n days prior to measuremet; n = 38
+Tavg40,°C,Average temperature on the day of and n days prior to measuremet; n = 39
+Tavg41,°C,Average temperature on the day of and n days prior to measuremet; n = 40
+Tavg42,°C,Average temperature on the day of and n days prior to measuremet; n = 41
+Tavg43,°C,Average temperature on the day of and n days prior to measuremet; n = 42
+Tavg44,°C,Average temperature on the day of and n days prior to measuremet; n = 43
+Tavg45,°C,Average temperature on the day of and n days prior to measuremet; n = 44
+Tavg46,°C,Average temperature on the day of and n days prior to measuremet; n = 45
+Tavg47,°C,Average temperature on the day of and n days prior to measuremet; n = 46
+Tavg48,°C,Average temperature on the day of and n days prior to measuremet; n = 47
+Tavg49,°C,Average temperature on the day of and n days prior to measuremet; n = 48
+Tavg50,°C,Average temperature on the day of and n days prior to measuremet; n = 49
+Tavg51,°C,Average temperature on the day of and n days prior to measuremet; n = 50
+Tavg52,°C,Average temperature on the day of and n days prior to measuremet; n = 51
+Tavg53,°C,Average temperature on the day of and n days prior to measuremet; n = 52
+Tavg54,°C,Average temperature on the day of and n days prior to measuremet; n = 53
+Tavg55,°C,Average temperature on the day of and n days prior to measuremet; n = 54
+Tavg56,°C,Average temperature on the day of and n days prior to measuremet; n = 55
+Tavg57,°C,Average temperature on the day of and n days prior to measuremet; n = 56
+Tavg58,°C,Average temperature on the day of and n days prior to measuremet; n = 57
+Tavg59,°C,Average temperature on the day of and n days prior to measuremet; n = 58
+Tavg60,°C,Average temperature on the day of and n days prior to measuremet; n = 59
+Tavg61,°C,Average temperature on the day of and n days prior to measuremet; n = 60
+Tavg62,°C,Average temperature on the day of and n days prior to measuremet; n = 61
+Tavg63,°C,Average temperature on the day of and n days prior to measuremet; n = 62
+Tavg64,°C,Average temperature on the day of and n days prior to measuremet; n = 63
+Tavg65,°C,Average temperature on the day of and n days prior to measuremet; n = 64
+Tavg66,°C,Average temperature on the day of and n days prior to measuremet; n = 65
+Tavg67,°C,Average temperature on the day of and n days prior to measuremet; n = 66
+Tavg68,°C,Average temperature on the day of and n days prior to measuremet; n = 67
+Tavg69,°C,Average temperature on the day of and n days prior to measuremet; n = 68
+Tavg70,°C,Average temperature on the day of and n days prior to measuremet; n = 69
+Tavg71,°C,Average temperature on the day of and n days prior to measuremet; n = 70
+Tavg72,°C,Average temperature on the day of and n days prior to measuremet; n = 71
+Tavg73,°C,Average temperature on the day of and n days prior to measuremet; n = 72
+Tavg74,°C,Average temperature on the day of and n days prior to measuremet; n = 73
+Tavg75,°C,Average temperature on the day of and n days prior to measuremet; n = 74
+Tavg76,°C,Average temperature on the day of and n days prior to measuremet; n = 75
+Tavg77,°C,Average temperature on the day of and n days prior to measuremet; n = 76
+Tavg78,°C,Average temperature on the day of and n days prior to measuremet; n = 77
+Tavg79,°C,Average temperature on the day of and n days prior to measuremet; n = 78
+Tavg80,°C,Average temperature on the day of and n days prior to measuremet; n = 79
+Tavg81,°C,Average temperature on the day of and n days prior to measuremet; n = 80
+Tavg82,°C,Average temperature on the day of and n days prior to measuremet; n = 81
+Tavg83,°C,Average temperature on the day of and n days prior to measuremet; n = 82
+Tavg84,°C,Average temperature on the day of and n days prior to measuremet; n = 83
+Tavg85,°C,Average temperature on the day of and n days prior to measuremet; n = 84
+Tavg86,°C,Average temperature on the day of and n days prior to measuremet; n = 85
+Tavg87,°C,Average temperature on the day of and n days prior to measuremet; n = 86
+Tavg88,°C,Average temperature on the day of and n days prior to measuremet; n = 87
+Tavg89,°C,Average temperature on the day of and n days prior to measuremet; n = 88
+Tavg90,°C,Average temperature on the day of and n days prior to measuremet; n = 89
+Tavg91,°C,Average temperature on the day of and n days prior to measuremet; n = 90
+ai,mm/mm,Aridity index (mean annual precipitation / potential evapotranspiration)
+Temperature_gs,°C,Average temperature during the growing season from 1901-2015 (growing season = all months where average temperature > 0)
+Precipitation_gs,mm,Average precipitation during the growing season from 1901-2015 (growing season = all months where average temperature > 0)
+VPD_gs,kPa,Average leaf to air vapor pressure deficit during the growing season from 1901-2015 (growing season = all months where average temperature > 0)
+PAR_gs,µmol/m2/s,Average photosynthetically active radiation during the growing season from 1901-2015 (growing season = all months where average temperature > 0)
+aci_id,unitless,id corresponding to A/Ci curve file
