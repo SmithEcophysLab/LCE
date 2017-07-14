@@ -1,0 +1,22 @@
+Variable,Units,Description
+Photo,µmol/m2/s,Net photosynthetic rate
+Cond,mol/m2/s,Stomatal conductance
+Ci,µmol/mol,Intracellular CO2
+Trmmol,mmol/m2/s,Transpiration rate
+VPD,kPa,Vapor pressure deifcit
+LA,cm2,Leaf area
+StmRat,NA,Ratio of stomatal density from one sideo f leaf to other
+BLCond,mol/m2/s,Boundary layer conductance
+Tair,°C,Air temprature
+Tleaf,°C,Leaf temperature
+TBlk,°C,Block temperature
+CO2R,µmol/mol,Reference CO2
+CO2S,µmol/mol,Sample CO2
+H2OR,mmol/mol,Reference H2O
+H2OS,mmol/mol,Sample H2O
+RH_R,%,Reference relative humidity
+RH_S,%,Sample relative humidity
+Flow,µmol/s,Flow rate
+Pari,µmol/m2/s,Photosynthetically active radiation inside the chamber
+Press,kPa,Atmospheric pressure
+id,NA,Identifier for Aci curve
