@@ -23,12 +23,12 @@ c_tresp_R <- -0.00179152 # value for c parameter in temperature response curve f
 ############################################
 # read in ACi curve
 ############################################
-aci_c3 <- read.csv('~/SLCE/SLCE_ACi_curves/Auburn_Iopa_1.csv') # set path within local environment
+aci_c3 <- read.csv('LCE_ACi_curves/Auburn_Iopa_1.csv') # set path within local environment
 
 ############################################
 # read in SLCE_data
 ############################################
-slce <- read.csv('~/SLCE/SLCE_data.csv') # set path to local environment
+slce <- read.csv('LCE_data.csv') # set path to local environment
 slce_c3 = subset(slce, aci_id == id_c3) # slce data for individual of interest
 
 ############################################
@@ -41,7 +41,8 @@ aci_c3$Rd <- rd_c3_tphoto # add dark respiration to ACi data
 ############################################
 # fit Aci curve
 ############################################
-fit_c3 <- fitaci(aci_c3, varnames = list(ALEAF = "Photo", Tleaf = "Tleaf", Ci = "Ci", PPFD = "Pari", Rd = "Rd"), Tcorrect=FALSE, useRd=TRUE) # fit curve
+fit_c3 <- fitaci(aci_c3, varnames = list(ALEAF = "Photo", Tleaf = "Tleaf", Ci = "Ci", PPFD = "Pari", Rd = "Rd"), 
+                 Tcorrect=FALSE, useRd=TRUE) # fit curve
 
 ############################################
 ############################################
@@ -71,10 +72,32 @@ Vpr=80
 gbs= 3e-3
 
 # enzyme-limited photosynthesis function
-A.enzyme.func=Photo ~ (-(-(((pmin(Ci * Vpmax/(Ci + Kp), Vpr)) - Rm + gbs * Ci) + (Vcmax - Rd) + gbs * K +((alpha/0.047) * (low_gammastar * Vcmax + Rd * Kc/Ko)))) - sqrt((-(((pmin(Ci * Vpmax/(Ci + Kp), Vpr)) - Rm + gbs * Ci) + (Vcmax - Rd) + gbs * K +((alpha/0.047) * (low_gammastar * Vcmax + Rd * Kc/Ko))))^2 - 4 * a.c * ((Vcmax - Rd) * ((pmin(Ci * Vpmax/(Ci + Kp), Vpr)) - Rm + gbs * Ci) - (Vcmax * gbs * low_gammastar * O2 + Rd * gbs * K))))/(2 * a.c)-Rd
+A.enzyme.func=Photo ~ (-(-(((pmin(Ci * Vpmax/(Ci + Kp), Vpr)) - Rm + gbs * Ci) + (Vcmax - Rd) + gbs * 
+                             K +((alpha/0.047) * (low_gammastar * Vcmax + Rd * Kc/Ko)))) - 
+                         sqrt((-(((pmin(Ci * Vpmax/(Ci + Kp), Vpr)) - Rm + gbs * Ci) + (Vcmax - Rd) + gbs * 
+                                   K +((alpha/0.047) * (low_gammastar * Vcmax + Rd * Kc/Ko))))^2 - 4 * a.c * 
+                                ((Vcmax - Rd) * ((pmin(Ci * Vpmax/(Ci + Kp), Vpr)) - Rm + gbs * Ci) - 
+                                   (Vcmax * gbs * low_gammastar * O2 + Rd * gbs * K))))/(2 * a.c)-Rd
 
 # light-limited photosynthesis function
-A.light.func=Photo ~ (-(-((x * ((1/(2 * THETA)) * (Qp2 + Jmax - sqrt((Qp2 + Jmax)^2 - 4 * THETA * Qp2 * Jmax)))/2 - Rm + gbs * Ci) + ((1 - x) * ((1/(2 * THETA)) * (Qp2 + Jmax - sqrt((Qp2 + Jmax)^2 - 4 * THETA * Qp2 * Jmax)))/3 - Rd) +gbs * (7 * low_gammastar * O2/3) + alpha * low_gammastar/0.047 *((1 - x) * ((1/(2 * THETA)) * (Qp2 + Jmax - sqrt((Qp2 + Jmax)^2 - 4 * THETA * Qp2 * Jmax)))/3 + 7*Rd/3))) - sqrt((-((x * ((1/(2 * THETA)) * (Qp2 + Jmax - sqrt((Qp2 + Jmax)^2 - 4 * THETA * Qp2 * Jmax)))/2 - Rm + gbs * Ci) + ((1 - x) * ((1/(2 * THETA)) * (Qp2 + Jmax - sqrt((Qp2 + Jmax)^2 - 4 * THETA * Qp2 * Jmax)))/3 - Rd) +gbs * (7 * low_gammastar * O2/3) + alpha * low_gammastar/0.047 *((1 - x) * ((1/(2 * THETA)) * (Qp2 + Jmax - sqrt((Qp2 + Jmax)^2 - 4 * THETA * Qp2 * Jmax)))/3 + 7*Rd/3)))^2 - 4 * a.j * (((x * ((1/(2 * THETA)) * (Qp2 + Jmax - sqrt((Qp2 + Jmax)^2 - 4 * THETA * Qp2 * Jmax)))/2 - Rm + gbs * Ci) * ((1 - x) * ((1/(2 * THETA)) * (Qp2 + Jmax - sqrt((Qp2 + Jmax)^2 - 4 * THETA * Qp2 * Jmax)))/3 - Rd)) -gbs * low_gammastar * O2 * ((1 - x) * ((1/(2 * THETA)) * (Qp2 + Jmax - sqrt((Qp2 + Jmax)^2 - 4 * THETA * Qp2 * Jmax)))/3 + 7 * Rd/3))))/(2 * a.j)-Rd
+A.light.func=Photo ~ (-(-((x * ((1/(2 * THETA)) * 
+                                  (Qp2 + Jmax - sqrt((Qp2 + Jmax)^2 - 4 * THETA * Qp2 * Jmax)))/2 - 
+                             Rm + gbs * Ci) + ((1 - x) * ((1/(2 * THETA)) * 
+                                                            (Qp2 + Jmax - sqrt((Qp2 + Jmax)^2 - 4 * THETA * Qp2 * Jmax)))/3 - Rd) +
+                            gbs * (7 * low_gammastar * O2/3) + alpha * low_gammastar/0.047 *((1 - x) * 
+                                                                                               ((1/(2 * THETA)) * 
+                                                                                                  (Qp2 + Jmax - sqrt((Qp2 + Jmax)^2 - 4 * THETA * Qp2 * Jmax)))/3 + 7*Rd/3))) - 
+                        sqrt((-((x * ((1/(2 * THETA)) * (Qp2 + Jmax - sqrt((Qp2 + Jmax)^2 - 4 * THETA * Qp2 * Jmax)))/2 - 
+                                   Rm + gbs * Ci) + ((1 - x) * ((1/(2 * THETA)) * 
+                                                                  (Qp2 + Jmax - sqrt((Qp2 + Jmax)^2 - 4 * THETA * Qp2 * Jmax)))/3 - Rd) +
+                                  gbs * (7 * low_gammastar * O2/3) + alpha * low_gammastar/0.047 *((1 - x) * 
+                                                                                                     ((1/(2 * THETA)) * 
+                                                                                                        (Qp2 + Jmax - sqrt((Qp2 + Jmax)^2 - 4 * THETA * Qp2 * Jmax)))/3 + 7*Rd/3)))^2 - 
+                               4 * a.j * (((x * ((1/(2 * THETA)) * (Qp2 + Jmax - sqrt((Qp2 + Jmax)^2 - 4 * THETA * Qp2 * Jmax)))/2 - 
+                                              Rm + gbs * Ci) * ((1 - x) * ((1/(2 * THETA)) * (Qp2 + Jmax - sqrt((Qp2 + Jmax)^2 - 4 * 
+                                                                                                                  THETA * Qp2 * Jmax)))/3 - Rd)) -gbs * 
+                                            low_gammastar * O2 * ((1 - x) * ((1/(2 * THETA)) * 
+                                                                               (Qp2 + Jmax - sqrt((Qp2 + Jmax)^2 - 4 * THETA * Qp2 * Jmax)))/3 + 7 * Rd/3))))/(2 * a.j)-Rd
 
 ############################################
 # set parameters
@@ -86,19 +109,20 @@ c_tresp_R <- -0.00179152 # value for c parameter in temperature response curve f
 ############################################
 # read in ACi curve
 ############################################
-aci_c4 <- read.csv('~/SLCE/SLCE_ACi_curves/KBS_Zmay_1.csv') # set path within local environment
+aci_c4 <- read.csv('LCE_ACi_curves/KBS_Zmay_1.csv') # set path within local environment
 
 ############################################
 # read in SLCE_data
 ############################################
-slce <- read.csv('~/SLCE/SLCE_data.csv') # set path to local environment
+slce <- read.csv('LCE_data.csv') # set path to local environment
 slce_c4 = subset(slce, aci_id == id_c4) # slce data for individual of interest
 
 ############################################
 # extract dark respiration value from SLCE_data and add to Aci dataset
 ############################################
 rd_c4 <- slce_c4$Rd # find Rd value for curve of interest
-rd_c4_tphoto <- rd_c4 / exp((b_tresp_R * (slce_c4$Tleaf_R - slce_c4$Tleaf_photo)) + (c_tresp_R * (slce_c4$Tleaf_R^2 - slce_c4$Tleaf_photo^2))) # adjust Rd to similar temperature as the A/Ci data
+rd_c4_tphoto <- rd_c4 / exp((b_tresp_R * (slce_c4$Tleaf_R - slce_c4$Tleaf_photo)) + 
+                              (c_tresp_R * (slce_c4$Tleaf_R^2 - slce_c4$Tleaf_photo^2))) # adjust Rd to similar temperature as the A/Ci data
 aci_c4$Rd <- rd_c4_tphoto # add dark respiration to ACi data
 
 ############################################
@@ -127,8 +151,10 @@ ci_trans <- 150 # estimated Ci transition point
 ############################################
 # fit the enzyme and light limited portions of the curve separately
 ############################################
-fit_enzyme <- nlsLM(A.enzyme.func, data = subset(aci_c4, Ci < ci_trans & Ci > 0), start=list(Vcmax=30,Vpmax=100), control=nls.control(maxiter=500, minFactor=1/10000)) # fit the enzyme limited portion of the curve (Vcmax and Vpmax)
-fit_light = nlsLM(A.light.func, data= subset(aci_c4, Ci >= ci_trans), start = list(Jmax = 130), control = nls.control(maxiter = 500, minFactor = 1/10000)) # fit the light-limted portion of the curve (Jmax)
+fit_enzyme <- nlsLM(A.enzyme.func, data = subset(aci_c4, Ci < ci_trans & Ci > 0), 
+                    start=list(Vcmax=30,Vpmax=100), control=nls.control(maxiter=500, minFactor=1/10000)) # fit the enzyme limited portion of the curve (Vcmax and Vpmax)
+fit_light = nlsLM(A.light.func, data= subset(aci_c4, Ci >= ci_trans), 
+                  start = list(Jmax = 130), control = nls.control(maxiter = 500, minFactor = 1/10000)) # fit the light-limted portion of the curve (Jmax)
 
 
 
